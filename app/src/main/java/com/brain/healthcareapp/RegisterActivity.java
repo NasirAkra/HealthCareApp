@@ -36,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
             String password=Repassword.getText().toString();
             String Confirm=Reconfirmpassword.getText().toString();
             String email=Email.getText().toString();
+            Database db =new Database(getApplicationContext(),"HealthCare",null,1);
 
             if (username.isEmpty() || password.isEmpty() || Confirm.isEmpty() || email.isEmpty())
             {
@@ -47,6 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
                {
                    if (isValid(password))
                    {
+                       db.register(username,email,password);
                        Toast.makeText(this, "Record Inserted", Toast.LENGTH_SHORT).show();
                        startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
                        
