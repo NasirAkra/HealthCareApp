@@ -38,4 +38,4 @@ To set up **HealthCareApp** locally:
 1. **Clone the Repository**  
    Run the following command in your terminal:  
    ```bash
-   git clone https://github.com/yourusername/HealthCareApp.git
+   git clone https://github.com/NasirAkra/HealthCareApp.git
